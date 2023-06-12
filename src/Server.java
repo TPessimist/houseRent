@@ -37,7 +37,7 @@ public class Server {
   }
 
   public static void main(String[] args) throws IOException {
-    Server server = new Server(8000);
+    Server server = new Server(8080);
     server.start();
   }
 }

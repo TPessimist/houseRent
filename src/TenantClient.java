@@ -125,7 +125,7 @@ public class TenantClient {
     frame.add(pricePanel, BorderLayout.NORTH);
     frame.add(delayPanel, BorderLayout.CENTER);
     frame.add(buttonPanel, BorderLayout.SOUTH);
-//    frame.setVisible(true);
+    frame.setVisible(true);
 
     JPanel inputPanel = new JPanel(new BorderLayout());
     inputPanel.add(inputField, BorderLayout.CENTER);

@@ -44,7 +44,8 @@ public class LandlordClient {
             switch (parts[0]) {
               //租客延期
               case "DELAY_PAYMENT": {
-                JOptionPane.showMessageDialog(frame, message);
+                //租客请求延期的方法
+
               }
               //租客发送消息
               case "tenantMsg": {
@@ -73,7 +74,7 @@ public class LandlordClient {
     SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
     frame = new JFrame("房东客户端");
     messageFrame = new JFrame("房东聊天框");
-    frame.setSize(500, 500);
+    frame.setSize(500, 200);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     messageFrame.setSize(500, 500);
     messageFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -101,6 +102,7 @@ public class LandlordClient {
         inputField.setText("");
       }
     });
+
     setPriceButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
@@ -123,7 +125,7 @@ public class LandlordClient {
     buttonPanel.add(setPriceButton);
     frame.add(pricePanel, BorderLayout.CENTER);
     frame.add(buttonPanel, BorderLayout.SOUTH);
-//    frame.setVisible(true);
+    frame.setVisible(true);
 
     JPanel inputPanel = new JPanel(new BorderLayout());
     inputPanel.add(inputField, BorderLayout.CENTER);

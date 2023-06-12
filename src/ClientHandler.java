@@ -30,15 +30,7 @@ public class ClientHandler extends Thread {
         if (message == null) {
           break;
         }
-        System.out.println("收到客户端消息：" + message);
-        String[] parts = message.split(":");
-        if (parts[0].equals("SET_PRICE")) {
-          server.broadcast("房东设置了新的房租价格：" + parts[1], this);
-        } else if (parts[0].equals("DELAY_PAYMENT")) {
-          server.broadcast("租客申请延期交钱：" + parts[1] + "天", this);
-        } else {
-          server.broadcast(message, this);
-        }
+        server.broadcast(message, this);
       }
     } catch (IOException e) {
       e.printStackTrace();
@@ -53,4 +45,5 @@ public class ClientHandler extends Thread {
       }
     }
   }
+
 }
